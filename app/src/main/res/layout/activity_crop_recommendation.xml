@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green_800"
+    tools:context=".CropRecommendationActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/label_nitrogen"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.4"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:padding="8dp"
+                android:textSize="18sp"
+                android:text="Nitrogen"
+                android:textColor="@color/basic_light"
+                app:layout_constraintEnd_toStartOf="@+id/nitrogen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/nitrogen"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.5"
+                android:layout_height="wrap_content"
+                android:hint="Nitrogen"
+                android:textColor="@color/basic_light"
+                android:inputType="numberDecimal"
+                android:text="25"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/label_nitrogen"/>
+
+            <TextView
+                android:id="@+id/label_phosphorous"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.4"
+                android:layout_height="wrap_content"
+                android:text="Phosphorous"
+                android:gravity="end"
+                android:textSize="18sp"
+                android:padding="8dp"
+                android:textColor="@color/basic_light"
+                app:layout_constraintEnd_toStartOf="@id/phosphorous"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nitrogen" />
+
+            <EditText
+                android:id="@+id/phosphorous"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.5"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:textColor="@color/basic_light"
+                android:inputType="numberDecimal"
+                android:text="25"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/label_phosphorous"
+                app:layout_constraintTop_toBottomOf="@+id/nitrogen" />
+
+            <TextView
+                android:id="@+id/label_potassium"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.4"
+                android:layout_height="wrap_content"
+                android:text="Potassium"
+                android:gravity="end"
+                android:textSize="18sp"
+                android:padding="8dp"
+                android:textColor="@color/basic_light"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/potassium"
+                app:layout_constraintTop_toBottomOf="@+id/phosphorous" />
+
+            <EditText
+                android:id="@+id/potassium"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.5"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:inputType="numberDecimal"
+                android:textColor="@color/basic_light"
+                android:text="25"
+                app:layout_constraintStart_toEndOf="@+id/label_potassium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/phosphorous" />
+
+            <TextView
+                android:id="@+id/label_ph"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.4"
+                android:layout_height="wrap_content"
+                android:text="PH"
+                android:textColor="@color/basic_light"
+                android:gravity="end"
+                android:textSize="18sp"
+                android:padding="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ph"
+                app:layout_constraintTop_toBottomOf="@+id/potassium" />
+
+            <EditText
+                android:id="@+id/ph"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.5"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:inputType="numberDecimal"
+                android:textColor="@color/basic_light"
+                app:layout_constraintStart_toEndOf="@id/label_ph"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="6"
+                app:layout_constraintTop_toBottomOf="@+id/potassium" />
+
+            <TextView
+                android:id="@+id/label_rain"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.4"
+                android:layout_height="wrap_content"
+                android:textColor="@color/basic_light"
+                android:text="Rainfall"
+                android:gravity="end"
+                android:textSize="18sp"
+                android:padding="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/rainfall"
+                app:layout_constraintTop_toBottomOf="@+id/ph" />
+
+            <EditText
+                android:id="@+id/rainfall"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.5"
+                android:layout_height="wrap_content"
+                android:textColor="@color/basic_light"
+                android:hint=""
+                android:inputType="numberDecimal"
+                android:text="125"
+                app:layout_constraintStart_toEndOf="@id/label_rain"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ph" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+
+                app:layout_constraintTop_toBottomOf="@id/rainfall">
+
+                <Button
+                    android:id="@+id/btn_loc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Get Location"
+                    app:layout_constraintTop_toBottomOf="@id/rainfall"
+                    app:layout_constraintWidth_percent="0.3" />
+
+                <TextView
+                    android:id="@+id/currentLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="16sp"
+                    android:textColor="@color/basic_light"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toEndOf="@id/btn_loc"
+                    app:layout_constraintTop_toBottomOf="@id/rainfall" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/recommendedCrop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green_50"
+        android:textSize="20dp"
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/exploreCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+    <Button
+        android:id="@+id/exploreCrop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/recommendedCrop"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="More"
+        android:backgroundTint="@color/basic_light"
+        android:textColor="@color/basic_dark"
+        />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/btn_getRec"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/loadingPb"
+        />
+    <Button
+        android:id="@+id/btn_getRec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"
+        android:text="Get Recommendation"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

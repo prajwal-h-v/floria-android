@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/basic_dark"
+    tools:context=".CropInfoActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/basic_dark"
+        android:layout_marginTop="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/cropInfoName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:letterSpacing="0.05"
+                android:text="Crop Name"
+                android:textAlignment="center"
+                android:textColor="@color/basic_light"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.45" />
+            <ImageView
+                android:id="@+id/cropIV"
+                android:layout_width="match_parent"
+                android:layout_height="180sp"
+                app:layout_constraintTop_toBottomOf="@id/cropInfoName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:contentDescription=""
+                android:layout_margin="16dp"/>
+            <ProgressBar
+                android:id="@+id/imagePB"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/scrollView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+        <LinearLayout
+            android:id="@+id/desc_LL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_Cname">
+
+            <TextView
+                android:id="@+id/info_desc_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.05"
+                android:textAlignment="center"
+                android:textColor="@color/basic_light"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/info_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:lineHeight="28dp"
+                android:textColor="@color/basic_light" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/usage_LL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="vertical"
+           >
+
+            <TextView
+                android:id="@+id/info_usage_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.05"
+                android:textAlignment="center"
+                android:textColor="@color/basic_light"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+
+                />
+
+
+            <TextView
+                android:id="@+id/info_usage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/basic_light"
+                android:textSize="20sp"
+                android:lineHeight="28dp"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/prop_LL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/info_prop_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.05"
+                android:textAlignment="center"
+                android:textColor="@color/basic_light"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+
+                />
+
+
+            <TextView
+                android:id="@+id/info_prop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/basic_light"
+                android:textSize="20sp"
+                android:lineHeight="28dp"
+
+                />
+
+        </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
